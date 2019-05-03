@@ -16,7 +16,7 @@
 
 
 /****  LEFT SIDE ~ MENU ITEMS  ****/
-.leftSide {
+#sideBar {
     background: rgb(11, 14, 46);
     width: 300px;
     height: 100vh;
@@ -24,17 +24,23 @@
     grid-template-rows: repeat(12, 1fr);
     justify-items: center;
     position: fixed;
-    overflow: auto;
+    overflow: none;
+    left: 0;
+    transition: all 500ms linear;
 }
 
-.leftSide a {
+#sideBar.active {
+    left: -300px;
+}
+
+.sideBar a {
     color: white;
 }
 
 /****  LEFT SIDE ~ HEADER & LOGO  ****/
 .header {
     width: 300px;
-    height: 300px;
+    height: 200px;
     display: grid;
     grid-template: 1fr;
     justify-content: center;
@@ -45,9 +51,40 @@
 .logo {
     background-image: url(/images/Logo1.jpg);
     width: 200px;
-    height: 200px;
+    height: 150px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+}
+
+/****  LEFT SIDE ~ TOGGLE BUTTON  ****/
+#toggleBtn {
+    position: absolute;
+    left: 266px;
+    top: 201px;
+    background: orangered;
+    padding: 2px;
+    transition: all 500ms linear;
+}
+
+#toggleBtn.active {
+    left: 300px;
+    top: 201px;
+}
+
+#menuBtn {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    color: white;
+    justify-content: center;
+    align-content: center;
+    font-size: 24px;
+    transition: all 500ms linear;
+}
+
+#menuBtn.active {
+    transform: rotate(-180deg);
 }
 
 /****  LEFT SIDE ~ NAVBAR  ****/
@@ -72,6 +109,10 @@
     font-size: 18px;
     line-height: 50px;
     letter-spacing: 2px;
+}
+
+.navbar ul #donate {
+    padding-top: 25px;
 }
 
 .navbar ul .donate {
@@ -151,8 +192,21 @@
 
 
 
-.rightSide {
+#rightSide {
     margin: 0;
-    padding: 310px;
+    padding: 0px 310px;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-column: 1/13;
+    transition: all 500ms linear;
+}
+
+#rightSide.active {
+    padding: 0;
+}
+
+.rightSide p {
+    
 }
 

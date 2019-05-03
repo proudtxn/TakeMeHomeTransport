@@ -13,11 +13,16 @@
     <div class="wrapper">
 
         <!--  LEFT SIDE  -->
-        <div class="leftSide">
+        <div id="sideBar" class="sideBar">
             <!--  HEADER  -->
             <header class="header">
                 <div class="logo"><a href="#"></a></div>
             </header>
+
+            <!--  TOGGLE/HIDE MENU  -->
+            <div id="toggleBtn" class="toggleBtn" onclick="hideNav()">
+                <i id="menuBtn" class="fas fa-angle-left"></i>
+            </div>
 
 
             <!--  NAVBAR  -->
@@ -29,7 +34,9 @@
                         <li class=""><a href="#howHelp" class="scroll">How Can I Help</a></li>
                         <li class=""><a href="#events" class="scroll">Events</a></li>
                         <li class=""><a href="#faq" class="scroll">FAQ</a></li>
-                        <li class="donate"><a href="donate" class="scroll">Donate</a></li>
+                        <div id="donate">
+                            <li class="donate"><a href="https://www.paypal.me/takemehometransport" target="_blank" class="scroll">Donate</a></li>
+                        </div>
                     </ul>
                 </nav>
             </div>
@@ -37,16 +44,16 @@
             <!--  SOCIAL MEDIA  -->
             <footer class="navFooter">
                 <ul class="socialMedia">
-                    <li class="facebook"><a href="https://www.facebook.com/takemehometransport/"><i class="fab fa-facebook"></i></a></li>
-                    <li class="phone"><a href="#"><i class="fas fa-mobile-alt"></i></a></li>
-                    <li class="email"><a href="#"><i class="fas fa-envelope-square"></i></a></li>
+                    <li class="facebook"><a href="https://www.facebook.com/takemehometransport/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li class="phone"><a href="tel:+15125551234"><i class="fas fa-mobile-alt"></i></a></li>
+                    <li class="email"><a href="mailto:takemehometransport@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
                 </ul>
             </footer>
         </div>
 
 
         <!--  RIGHT SIDE  -->
-        <div class="rightSide">
+        <div id="rightSide" class="rightSide">
             <!--  SECTIONS  -->
             <!--  HOME PAGE  -->
             <section id="home">
