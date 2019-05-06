@@ -9,12 +9,13 @@
 /****  WRAPPER  ****/
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-gap: 20px;
 }
 
 
 
+
+/****  LEFT SIDE  ****/
 /****  LEFT SIDE ~ MENU ITEMS  ****/
 #sideBar {
     background: rgb(11, 14, 46);
@@ -70,6 +71,7 @@
 #toggleBtn.active {
     left: 300px;
     top: 201px;
+    z-index: 1;
 }
 
 #menuBtn {
@@ -106,13 +108,13 @@
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 50px;
     letter-spacing: 2px;
 }
 
 .navbar ul #donate {
-    padding-top: 25px;
+    padding-top: 25px; 
 }
 
 .navbar ul .donate {
@@ -120,6 +122,10 @@
     background: orangered;
     border: 1px solid white;
     padding: 0px 50px;
+}
+
+.navbar ul .donate a {
+    font-size: 18px;
 }
 
 .navbar ul .donate a:hover {
@@ -166,6 +172,7 @@
     transition: .3s;
 }
 
+
 /****  LEFT SIDE ~ FOOTER  ****/
 .navFooter {
     width: 100%;
@@ -183,7 +190,7 @@
 }
 
 .navFooter ul li {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .navFooter ul li a:hover {
@@ -192,21 +199,141 @@
 
 
 
+
+/****  RIGHT SIDE  ****/
+#rightSideWrapper {
+    box-sizing: border-box;
+    color: rgb(11, 14, 46);
+}
+
 #rightSide {
-    margin: 0;
-    padding: 0px 310px;
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-column: 1/13;
+    background: #ccc;
+    margin: 30px 50px 30px 350px;
     transition: all 500ms linear;
 }
 
 #rightSide.active {
-    padding: 0;
+    margin: 30px 50px;
 }
 
-.rightSide p {
-    
+
+/****  RIGHT SIDE ~ HOME PAGE  ****/
+#home {
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    height: 100vh;
+    display: grid;
+    animation: animate 60s ease-in-out infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 500ms linear;
 }
 
+@keyframes animate {
+    0%, 100% {
+        background-image: url(/images/Home/dog1.jpg)
+    }
+    10% {
+        background-image: url(/images/Home/dog2.jpg)
+    }
+    20% {
+        background-image: url(/images/Home/dog3.jpg)
+    }
+    30% {
+        background-image: url(/images/Home/dog4.jpg)
+    }
+    40% {
+        background-image: url(/images/Home/dog5.jpg)
+    }
+    50% {
+        background-image: url(/images/Home/dog6.jpg)
+    }
+    60% {
+        background-image: url(/images/Home/dog7.jpg)
+    }
+    70% {
+        background-image: url(/images/Home/dog8.jpg)
+    }
+    80% {
+        background-image: url(/images/Home/dog9.jpg)
+    }
+    90% {
+        background-image: url(/images/Home/dog10.jpg)
+    }
+}
+
+#home h1 {
+    background: red;
+    color: white;
+    font-size: 60px;
+}
+
+#home h3 {
+    background: yellow;
+    color: white;
+    font-size: 30px;
+}
+
+
+/****  RIGHT SIDE ~ OUR IMPACT PAGE  ****/
+#impact {
+    background: yellow;
+    margin: 30px 50px;
+    height: 100vh;
+    background: #ddd;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    padding: 3rem;
+    clear: all;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#impact h1 {
+    font-size: 50px;
+    padding-bottom: 20px;
+    text-shadow: 0px 1px 3px rgba(104, 104, 104, 0.8);
+}
+
+#impact p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#impact img {
+    background: red;
+    display: grid;
+    max-width: 100%;
+    max-height: 95vh;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+
+/****  RIGHT SIDE ~ HOW CAN I HELP PAGE  ****/
+#howHelp {
+    background: url(/images/Logo1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/****  RIGHT SIDE ~ EVENTS PAGE  ****/
+#events {
+    background: url(/images/Logo1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/****  RIGHT SIDE ~ FAQ PAGE  ****/
+#faq {
+    background: url(/images/Logo1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
