@@ -3,4 +3,6 @@ function hideNav() {
     document.getElementById("toggleBtn").classList.toggle("active");
     document.getElementById("menuBtn").classList.toggle("active");
     document.getElementById("rightSide").classList.toggle("active");
+    document.getElementById("eventList").classList.toggle("active");
+    document.getElementById("calendar").classList.toggle("active");
 }
