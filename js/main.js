@@ -5,6 +5,7 @@ function hideNav () {
 	document.getElementById('rightSide').classList.toggle('active');
 	document.getElementById('eventList').classList.toggle('active');
 	document.getElementById('calendar').classList.toggle('active');
+	document.getElementById('howHelp').classList.toggle('active');
 }
 
 $(document).ready(function () {
