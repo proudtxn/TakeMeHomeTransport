@@ -6,6 +6,8 @@ function hideNav () {
 	document.getElementById('eventList').classList.toggle('active');
 	document.getElementById('calendar').classList.toggle('active');
 	document.getElementById('howHelp').classList.toggle('active');
+	document.getElementById('impact').classList.toggle('active');
+	document.getElementById('impactWording').classList.toggle('active');
 }
 
 $(document).ready(function () {
