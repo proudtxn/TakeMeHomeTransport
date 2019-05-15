@@ -315,7 +315,61 @@
 }
 
 
-/****  RIGHT SIDE RESPONSIVE DESIGN ~ ACTIVE NAVBAR ****/
+/****  RIGHT SIDE ~ DONATE BUTTON  ****/
+#donateBtn {
+    background: orangered;
+    cursor: pointer;
+    float: right;
+    font-size: 25px;
+    border: 2px solid white;
+    padding: 25px 10px;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(45px);
+    transition: all 500ms linear;
+}
+
+#donateBtn a {
+    text-decoration: none;
+    color: white;
+}
+
+#donateBtn:hover {
+    background: rgb(11, 14, 46);
+}
+
+#donateBtn.active {
+    transform: translateX(0px);
+}
+
+/****  RIGHT SIDE ~ DONATE BUTTON ~ RESPONSIVE DESIGN ****/
+@media screen and (max-width: 900px) {
+
+    #donateBtn {
+        transform: translateX(0px);
+    }
+
+    #donateBtn.active {
+        transform: translateX(45px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #donateBtn {
+        padding: 5px 35px;
+        letter-spacing: 2px;
+    }
+
+    #donateBtn p {
+        display: inline-block;
+    }
+}
+
+
+/****  RIGHT SIDE ~ ACTIVE NAVBAR ~ RESPONSIVE DESIGN  ****/
 @media screen and (max-width: 900px) {
 
     #rightSide {

@@ -11,6 +11,7 @@ function hideNav () {
 	document.getElementById('header').classList.toggle('active');
 	document.getElementById('rightSideWrapper').classList.toggle('active');
 	document.getElementById('wrapper').classList.toggle('active');
+	document.getElementById('donateBtn').classList.toggle('active');
 }
 
 $(document).ready(function () {
