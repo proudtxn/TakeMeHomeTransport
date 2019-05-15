@@ -8,6 +8,9 @@ function hideNav () {
 	document.getElementById('howHelp').classList.toggle('active');
 	document.getElementById('impact').classList.toggle('active');
 	document.getElementById('impactWording').classList.toggle('active');
+	document.getElementById('header').classList.toggle('active');
+	document.getElementById('rightSideWrapper').classList.toggle('active');
+	document.getElementById('wrapper').classList.toggle('active');
 }
 
 $(document).ready(function () {

@@ -7,9 +7,22 @@
 
 
 /****  WRAPPER  ****/
-.wrapper {
+#outerWrapper {
+    transform: translateX(0);
+}
+
+#wrapper {
     display: grid;
     grid-gap: 20px;
+    transition: all 500ms linear;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+    
+    #outerWrapper.active {
+        transform: translateX(300px);
+    }
 }
 
 
@@ -37,6 +50,8 @@
 .sideBar a {
     color: white;
 }
+/****  LEFT SIDE ~ MENU ITEMS END  ****/
+
 
 /****  LEFT SIDE ~ HEADER & LOGO  ****/
 .header {
@@ -57,6 +72,8 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+/****  LEFT SIDE ~ HEADER & LOGO END  ****/
+
 
 /****  LEFT SIDE ~ TOGGLE BUTTON  ****/
 #toggleBtn {
@@ -71,7 +88,6 @@
 #toggleBtn.active {
     left: 300px;
     top: 201px;
-    z-index: 1;
 }
 
 #menuBtn {
@@ -89,6 +105,83 @@
 #menuBtn.active {
     transform: rotate(-180deg);
 }
+/****  LEFT SIDE ~ TOGGLE BUTTON END  ****/
+
+/****  LEFT SIDE RESPONSIVE NAVBAR DESIGN  ****/
+@media screen and (max-width: 900px) {
+    
+    #sideBar {
+        left: -300px;
+    }
+
+    #sideBar.active {
+        left: 0px;
+    }
+
+    #toggleBtn {
+        left: 300px;
+        top: 201px;
+    }
+    
+    #toggleBtn.active {
+        left: 266px;
+        top: 201px;
+    }
+
+    #menuBtn {
+        transform: rotate(-180deg);
+    }
+    
+    #menuBtn.active {
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-height: 650px) {
+
+    #toggleBtn {
+        top: 0;
+    }
+
+    #toggleBtn.active {
+        top: 0;
+        left: 266px;
+    }
+    
+    #sideBar.active {
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 750px) and (max-height: 750px) {
+
+    #toggleBtn {
+        top: 0;
+    }
+
+    #toggleBtn.active {
+        top: 0;
+        left: 266px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #header.active {
+        width: 100%;
+        border-bottom: 1px solid white;
+    }
+
+    #sideBar.active {
+        width: 100%;
+    }
+
+    #toggleBtn.active {
+        left: calc(100% - 30px);
+    }
+}
+/****  LEFT SIDE RESPONSIVE NAVBAR DESIGN END  ****/
+
 
 /****  LEFT SIDE ~ NAVBAR  ****/
 .navbar {
@@ -172,6 +265,7 @@
     width: 100%;
     transition: .3s;
 }
+/****  LEFT SIDE ~ NAVBAR END  ****/
 
 
 /****  LEFT SIDE ~ FOOTER  ****/
@@ -197,38 +291,8 @@
 .navFooter ul li a:hover {
     color: orangered;
 }
-
-
-/****  LEFT SIDE RESPONSIVE NAVBAR DESIGN  ****/
-@media screen and (max-width: 900px) {
-    
-    #sideBar {
-        left: -300px;
-    }
-
-    #sideBar.active {
-        left: 0px;
-    }
-
-    #toggleBtn {
-        left: 300px;
-        top: 201px;
-        z-index: 1;
-    }
-    
-    #toggleBtn.active {
-        left: 266px;
-        top: 201px;
-    }
-
-    #menuBtn {
-        transform: rotate(-180deg);
-    }
-    
-    #menuBtn.active {
-        transform: rotate(0deg);
-    }
-}
+/****  LEFT SIDE ~ FOOTER END  ****/
+/****  LEFT SIDE END  ****/
 
 
 
@@ -242,26 +306,34 @@
 
 #rightSide {
     background: grey;
-    margin-left: 300px;
     transition: all 500ms linear;
+    margin-left: 300px;
 }
 
 #rightSide.active {
-    margin-left: 0;
+    margin-left: 0px;
 }
 
 
 /****  RIGHT SIDE RESPONSIVE DESIGN ~ ACTIVE NAVBAR ****/
 @media screen and (max-width: 900px) {
-    
+
     #rightSide {
-        margin-left: 0;
+        margin-left: 0px;
     }
 
     #rightSide.active {
-        margin-left: 300px;
+        transform: translateX(300px);
     }
 }
+
+@media screen and (max-width: 500px) {
+
+    #rightSide.active {
+        transform: translateX(100%);
+    }
+}
+
 
 
 
@@ -327,6 +399,7 @@
     justify-self: center;
     align-self: center;
     text-shadow: 0px 1px 3px rgba(104, 104, 104, 0.8);
+    transition: all 500ms linear;
 }
 
 #home h3 {
@@ -335,11 +408,61 @@
     text-align: center;
     padding: 0px 100px;
     text-shadow: 0px 1px 3px rgba(104, 104, 104, 0.8);
+    transition: all 500ms linear;
 }
 
 #home span {
     color: orangered;
 }
+
+/****  RIGHT SIDE ~ IMPACT PAGE ~ RESPONSIVE DESIGN  ****/
+@media screen and (max-width: 1070px) {
+
+    #home h1 {
+        font-size: 70px;
+    }
+
+    #home h3 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    #home h1 {
+        font-size: 60px;
+    }
+
+    #home h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    #home h1 {
+        font-size: 50px;
+    }
+
+    #home h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    #home h1 {
+        font-size: 50px;
+    }
+
+    #home h3 {
+        font-size: 25px;
+        padding: 0 30px;
+    }
+}
+
+/****  RIGHT SIDE ~ HOME PAGE END  ****/
+
 
 
 /****  RIGHT SIDE ~ OUR IMPACT PAGE  ****/
@@ -350,10 +473,6 @@
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
     padding: 3rem;
     transition: all 500ms linear;
-}
-
-#impactWrapper {
-    background: blue;
 }
 
 #impactImage {
@@ -387,6 +506,7 @@
 }
 
 /****  RIGHT SIDE ~ IMPACT PAGE ~ RESPONSIVE DESIGN  ****/
+
 @media screen and (max-width: 1160px) {
     
     #impact {
@@ -441,8 +561,9 @@
     }
 }
 
+
 @media screen and (max-width: 900px) {
-  
+
     #impactImage {
         width: 40%;
     }
@@ -452,7 +573,7 @@
     }
 
     #impactWording.active h1 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     #impactWording p {
@@ -463,6 +584,34 @@
         font-size: 15px;
     }
 }
+
+
+@media screen and (max-width: 760px) {
+
+    #impactWording.active h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    #impactWording.active h1 {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    #impactWording.active h1 {
+        font-size: 18px;
+    }
+
+    #impactWording.active p {
+        font-size: 12px;
+    }
+}
+/****  RIGHT SIDE ~ OUR IMPACT PAGE END  ****/
 
 
 
@@ -531,6 +680,8 @@
     max-height: 450px;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
+/****  RIGHT SIDE ~ HOW CAN I HELP PAGE END  ****/
+
 
 
 /****  RIGHT SIDE ~ EVENTS PAGE  ****/
@@ -638,6 +789,42 @@
 #calendar.active {
     margin-right: 100px;
 }
+
+/****  RESPONSIVE DESIGN  ~ EVENTS PAGE ****/
+@media screen and (max-width: 1350px) {
+    
+    #eventList {
+        width: 60vw;
+        height: 40vh;
+        grid-column: 1/4;
+        justify-self: center;
+        justify-content: center;
+        overflow: auto;
+        margin: 10px 20px;
+    }
+
+    #eventList.active {
+        margin: 10px 20px;
+    }
+
+    #calendar {
+        grid-column: 1/4;
+        width: 60vw;
+        min-width: 300px;
+        height: 50vh;
+        justify-self: center;
+        margin: 10px 20px;
+    }
+
+    #calendar.active {
+        margin: 10px 20px;
+    }
+
+    .eventList ul li ul li {
+        padding-bottom: 25px;
+    }
+}
+/****  RIGHT SIDE ~ EVENTS PAGE END  ****/
 
 
 
@@ -750,6 +937,7 @@
     max-height: 95vh;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
+/****  RIGHT SIDE ~ FAQ PAGE END  ****/
 
 
 
@@ -779,45 +967,9 @@
     justify-content: start;
     padding: 5px;
 }
+/****  RIGHT SIDE ~ FOOTER END  ****/
 
 
-
-
-
-/****  RESPONSIVE DESIGN  ****/
-@media screen and (max-width: 1350px) {
-    
-    #eventList {
-        width: 60vw;
-        height: 40vh;
-        grid-column: 1/4;
-        justify-self: center;
-        justify-content: center;
-        overflow: auto;
-        margin: 10px 20px;
-    }
-
-    #eventList.active {
-        margin: 10px 20px;
-    }
-
-    #calendar {
-        grid-column: 1/4;
-        width: 60vw;
-        min-width: 300px;
-        height: 50vh;
-        justify-self: center;
-        margin: 10px 20px;
-    }
-
-    #calendar.active {
-        margin: 10px 20px;
-    }
-
-    .eventList ul li ul li {
-        padding-bottom: 25px;
-    }
-}
 
 
 
