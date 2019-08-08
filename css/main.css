@@ -65,7 +65,7 @@
 }
 
 .logo {
-    background-image: url(/images/Logo2.jpg);
+    background-image: url(/images/Logo3.jpg);
     width: 250px;
     height: 150px;
     background-size: cover;
@@ -77,12 +77,14 @@
 
 /****  LEFT SIDE ~ TOGGLE BUTTON  ****/
 #toggleBtn {
+    display: block;
     position: absolute;
     left: 266px;
     top: 201px;
     background: orangered;
     padding: 2px;
     transition: all 500ms linear;
+    z-index: 99;
 }
 
 #toggleBtn.active {
@@ -100,6 +102,8 @@
     font-size: 24px;
     transition: all 500ms linear;
     cursor: pointer;
+    position: relative;
+    z-index: 99;
 }
 
 #menuBtn.active {
@@ -137,6 +141,8 @@
     }
 }
 
+/****  TEMP DISABLE OPEN/CLOSE MENU ON MOBILE DEVICE FOR TEMPORARY BANNER ADD CONFLICT  ****/
+/*
 @media screen and (max-height: 650px) {
 
     #toggleBtn {
@@ -147,14 +153,13 @@
         top: 0;
         left: 266px;
     }
-    
     #sideBar.active {
         overflow: auto;
     }
 }
 
-@media screen and (max-width: 750px) and (max-height: 750px) {
 
+@media screen and (max-width: 750px) and (max-height: 750px) {
     #toggleBtn {
         top: 0;
     }
@@ -164,6 +169,7 @@
         left: 266px;
     }
 }
+*/
 
 @media screen and (max-width: 500px) {
 
@@ -315,7 +321,22 @@
 }
 
 
+/****  TEMPORARY BANNER AD ~ THUMBNAIL  ****/
+#pokerBanner {
+    display: grid;
+    position: fixed;
+
+}
+
+#pokerBanner a img {   
+    width: 350px; 
+}
+/****  END ~ TEMPORARY BANNER AD ~ THUMBNAIL  ****/
+
+
 /****  RIGHT SIDE ~ DONATE BUTTON  ****/
+/****  RIGHT SIDE ~ DONATE BUTTON  -- TEMPORARILY DISABLED DUE TO BANNER AD  ****/
+/*
 #donateBtn {
     background: orangered;
     cursor: pointer;
@@ -340,11 +361,13 @@
     background: rgb(11, 14, 46);
 }
 
+
 #donateBtn.active {
     transform: translateX(0px);
 }
-
-/****  RIGHT SIDE ~ DONATE BUTTON ~ RESPONSIVE DESIGN ****/
+*/
+/****  RIGHT SIDE ~ DONATE BUTTON ~ RESPONSIVE DESIGN -- TEMPORARILY DISABLED DUE TO BANNER AD  ****/
+/*
 @media screen and (max-width: 900px) {
 
     #donateBtn {
@@ -367,6 +390,9 @@
         display: inline-block;
     }
 }
+*/
+/****  END ~ RIGHT SIDE ~ DONATE BUTTON ~ RESPONSIVE DESIGN  ****/
+
 
 
 /****  RIGHT SIDE ~ ACTIVE NAVBAR ~ RESPONSIVE DESIGN  ****/
@@ -390,8 +416,6 @@
 
 
 
-
-
 /****  RIGHT SIDE ~ HOME PAGE  ****/
 #home {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
@@ -401,40 +425,30 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition: all 500ms linear;
-    
+    transition: all 500ms linear;    
 }
 
 @keyframes animate {
     0%, 100% {
         background-image: url(/images/Home/dog1.jpg)
     }
-    10% {
+    14.25% {
         background-image: url(/images/Home/dog2.jpg)
     }
-    20% {
+    28.50% {
         background-image: url(/images/Home/dog3.jpg)
     }
-    30% {
+    42.75% {
         background-image: url(/images/Home/dog4.jpg)
     }
-    40% {
+    57% {
         background-image: url(/images/Home/dog5.jpg)
     }
-    50% {
+    71.25% {
         background-image: url(/images/Home/dog6.jpg)
     }
-    60% {
+    85.5% {
         background-image: url(/images/Home/dog7.jpg)
-    }
-    70% {
-        background-image: url(/images/Home/dog8.jpg)
-    }
-    80% {
-        background-image: url(/images/Home/dog9.jpg)
-    }
-    90% {
-        background-image: url(/images/Home/dog10.jpg)
     }
 }
 
@@ -626,16 +640,8 @@
         font-size: 50px;
     }
 
-    #impactWording.active h1 {
-        font-size: 30px;
-    }
-
     #impactWording p {
         font-size: 20px;
-    }
-
-    #impactWording.active p {
-        font-size: 15px;
     }
 }
 
@@ -657,12 +663,27 @@
 
 @media screen and (max-width: 700px) {
 
+    #impactWording h1 {
+        font-size: 25px;
+    }
+
+    #impactWording p {
+        font-size: 15px;
+    }
+
     #impactWording.active h1 {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     #impactWording.active p {
-        font-size: 12px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #impact {
+        margin: 0;
     }
 }
 /****  RIGHT SIDE ~ OUR IMPACT PAGE END  ****/
@@ -673,7 +694,7 @@
 /****  RIGHT SIDE ~ HOW CAN I HELP PAGE  ****/
 #howHelp {
     margin: 30px 50px;
-    height: 100vh;
+    height: 100%;
     background: #ddd;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
     padding: 3rem;
@@ -694,18 +715,22 @@
 
 #howHelp .top-box-a {
     grid-area: top-box-a;
+    max-height: 150px;
 }
 
 #howHelp .top-box-b {
     grid-area: top-box-b;
+    max-height: 350px;
 }
 
 #howHelp .bottom-box-a {
     grid-area: bottom-box-a;
+    margin-top: 50px;
 }
 
 #howHelp .bottom-box-b {
     grid-area: bottom-box-b;
+    margin-top: 50px;
 }
 
 #howHelp h1 {
@@ -734,7 +759,227 @@
     max-height: 450px;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
-/****  RIGHT SIDE ~ HOW CAN I HELP PAGE END  ****/
+
+
+/****  RIGHT SIDE ~ HOW CAN I HELP PAGE  ~ RESPONSIVE DESIGN  ****/
+@media screen and (max-width: 1500px) {
+
+    #howHelp {
+        padding: 50px;
+    }
+
+    #howHelp.active {
+        padding: 50px;
+    }
+
+    #howHelp h1 {
+        padding-bottom: 20px;
+    }
+
+    #howHelp ul {
+        padding-top: 20px;
+    }
+
+    #howHelp .bottom-box-b {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+
+    #howHelp {
+        grid-gap: 0px;
+    }
+
+    #howHelp.active {
+        padding: 50px;
+    }
+
+    #howHelp h1 {
+        font-size: 45px;
+    }
+
+    #howHelp.active h1 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+
+    #howHelp h1 {
+        font-size: 35px;
+    }
+
+    #howHelp.active h1 {
+        font-size: 50px;
+    }
+
+    #howHelp ul {
+        font-size: 23px
+    }
+
+    #howHelp.active ul {
+        font-size: 25px;
+    }
+
+    #howHelp .bottom-box-a {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1190px) {
+
+    #howHelp, #howHelp.active {
+        padding: 50px 20px;
+    }
+
+    #howHelp h1 {
+        font-size: 30px;
+    }
+
+    #howHelp.active h1 {
+        font-size: 40px;
+    }
+
+    #howHelp ul {
+        font-size: 20px;
+    }
+
+    #howHelp img {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    #howHelp h1 {
+        font-size: 23px;
+        transition: all 500ms linear;
+    }
+
+    #howHelp ul {
+        font-size: 15px;
+        transition: all 500ms linear;
+    }
+
+    #howHelp.active ul {
+        font-size: 22px;
+        transition: all 500ms linear;
+    }
+
+    #howHelp img {
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    #howHelp.active img {
+        width: 90%;
+    }
+
+    #howHelp .bottom-box-a {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    #howHelp.active h1 {
+        font-size: 23px;
+    }
+
+    #howHelp.active ul {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #howHelp h1 {
+        padding: 0px;
+        margin-left: -35px;
+        font-size: 10px;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    #howHelp.active h1 {
+        padding: 0px;
+        margin-left: -35px;
+        font-size: 10px;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    #howHelp ul {
+        display: inline-block;
+        width: 75%;
+        padding: 0px;
+        font-size: 8px;
+    }
+
+    #howHelp.active ul {
+        display: inline-block;
+        width: 75%;
+        padding: 0px;
+        font-size: 8px;
+    }
+
+    #howHelp ul li {
+        padding: 0px;
+        padding-top: 20px;
+    }
+
+    #howHelp.active ul li {
+        padding: 0px;
+        padding-top: 20px;
+    }
+
+    #howHelp .top-box-b {
+        width: 145%;
+        margin-left: -40px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    #howHelp.active .top-box-b {
+        width: 145%;
+        margin-left: -40px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    #howHelp .bottom-box-a {
+        padding: 0;
+        margin-left: -20px;
+        margin-top: 5px;
+        width: 85%;
+    }
+
+    #howHelp.active .bottom-box-a {
+        padding: 0;
+        margin-left: -20px;
+        margin-top: 5px;
+        width: 85%;
+    }
+
+    #howHelp .bottom-box-b {
+        padding: 0;
+        width: 130%;
+        margin-left: -15px;
+    }
+
+    #howHelp.active .bottom-box-b {
+        padding: 0;
+        width: 130%;
+        margin-left: -15px;
+    }
+}
+/****  END ~ RIGHT SIDE ~ HOW CAN I HELP PAGE  ~ RESPONSIVE DESIGN  ****/
+
+/****  END ~ RIGHT SIDE ~ HOW CAN I HELP PAGE END  ****/
 
 
 
@@ -748,13 +993,13 @@
             rgba(255, 255, 255, .0),
             rgba(255, 255, 255, .0)
         ),
-        url(/images/Event/dog4.jpg);
+        url(/images/Event/dog2.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: grid;
-    height: 100vh;
+    height: 100%;
     color: #ddd;
     padding-bottom: 100px;
 }
@@ -784,10 +1029,10 @@
 #eventList {
     background: rgba(221, 221, 221, 1);
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-    margin: 0px 10px 0px 20px;
+    margin: 0px 10px 0px 120px;
     display: grid;
     grid-column: 1/2;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     width: 300px;
     height: 80vh;
     color: rgb(11, 14, 46);
@@ -795,40 +1040,56 @@
 }
 
 #eventList.active {
-    margin-left: 100px;
+    margin-left: 200px;
 }
 
 .eventList h3 {
     justify-self: center;
-    align-self: center;
     font-size: 30px;
     letter-spacing: 1px;
+    padding-top: 25px;
+    text-decoration: underline;
+}
+
+#pastEvents {
+    color: orangered;
+    letter-spacing: 2px;
 }
 
 .eventList ul {
     list-style: none;
-    padding-left: 40px;
+    justify-self: center;
 }
 
 .eventList ul li {
     font-size: 20px;
+    padding-bottom: 10px;
 }
 
 .eventList ul li a {
     color: rgb(11, 14, 46);
+    text-decoration: none;
+}
+
+#pastEventList li a {
+    color: orangered;
+}
+
+#pastEventList li ul li {
+    color: orangered;
 }
 
 .eventList ul li a:hover {
     color: orangered;
 }
 
-.eventList .golfTournament {
-    padding-top: 50px;
+#pastEventList li a:hover {
+    color: rgb(11, 14, 46);
 }
 
 .eventList ul li ul li {
-    font-size: 15px;
-    padding-bottom: 50px;
+    font-size: 13px;
+    padding-bottom: 25px;
 }
 
 #calendar {

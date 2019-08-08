@@ -12,10 +12,10 @@ function hideNav () {
 	document.getElementById('rightSideWrapper').classList.toggle('active');
 	document.getElementById('wrapper').classList.toggle('active');
 	document.getElementById('donateBtn').classList.toggle('active');
+	document.getElementById('pokerBanner').classList.toggle('active');
 }
 
 $(document).ready(function () {
-
 	// SMOOTH SCROLLING - jQuery
 	var scrollLink = $('.scroll');
 
@@ -29,4 +29,21 @@ $(document).ready(function () {
 			1000
 		);
 	});
+});
+
+
+$(document).ready(function () {
+	// COLLAPSE MENU UPON CLICK ON MOBILE DEVICES ONLY
+	var menuClickCollapse = window.matchMedia('(max-width: 780px)');
+
+	function mediaMenuClickCollapse(menuClickCollapse) {
+		if (menuClickCollapse.matches) {
+			$('.links li a').on('click', function () {
+				$('#toggleBtn').click();
+			});
+		} 
+	}
+
+	mediaMenuClickCollapse(menuClickCollapse);
+	menuClickCollapse.addListener(mediaMenuClickCollapse);
 });
