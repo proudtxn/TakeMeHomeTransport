@@ -680,10 +680,14 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
     #impact {
-        margin: 0;
+        margin: 10px;
+    }
+
+    #impact.active {
+        margin: 10px;
     }
 }
 /****  RIGHT SIDE ~ OUR IMPACT PAGE END  ****/
@@ -895,10 +899,18 @@
 
 @media screen and (max-width: 600px) {
 
+    #howHelp {
+        margin: 10px;
+    }
+
+    #howHelp.active {
+        margin: 10px;
+    }
+
     #howHelp h1 {
         padding: 0px;
         margin-left: -35px;
-        font-size: 10px;
+        font-size: 15px;
         white-space: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
@@ -907,7 +919,7 @@
     #howHelp.active h1 {
         padding: 0px;
         margin-left: -35px;
-        font-size: 10px;
+        font-size: 15px;
         white-space: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
@@ -917,14 +929,18 @@
         display: inline-block;
         width: 75%;
         padding: 0px;
-        font-size: 8px;
+        font-size: 10px;
+        margin-left: 20px;
+        margin-right: -40px;
     }
 
     #howHelp.active ul {
         display: inline-block;
         width: 75%;
         padding: 0px;
-        font-size: 8px;
+        font-size: 10px;
+        margin-left: 20px;
+        margin-right: -40px;
     }
 
     #howHelp ul li {
@@ -938,43 +954,43 @@
     }
 
     #howHelp .top-box-b {
-        width: 145%;
-        margin-left: -40px;
-        padding-top: 10px;
+        width: 155%;
+        margin-left: -55px;
+        padding-top: 0px;
         padding-bottom: 15px;
     }
 
     #howHelp.active .top-box-b {
-        width: 145%;
-        margin-left: -40px;
-        padding-top: 10px;
+        width: 155%;
+        margin-left: -55px;
+        padding-top: 0px;
         padding-bottom: 15px;
     }
 
     #howHelp .bottom-box-a {
         padding: 0;
-        margin-left: -20px;
-        margin-top: 5px;
-        width: 85%;
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 75%;
     }
 
     #howHelp.active .bottom-box-a {
         padding: 0;
-        margin-left: -20px;
-        margin-top: 5px;
-        width: 85%;
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 75%;
     }
 
     #howHelp .bottom-box-b {
         padding: 0;
         width: 130%;
-        margin-left: -15px;
+        margin-left: -25px;
     }
 
     #howHelp.active .bottom-box-b {
         padding: 0;
         width: 130%;
-        margin-left: -15px;
+        margin-left: -25px;
     }
 }
 /****  END ~ RIGHT SIDE ~ HOW CAN I HELP PAGE  ~ RESPONSIVE DESIGN  ****/
@@ -1135,11 +1151,37 @@
         margin: 10px 20px;
     }
 
-    .eventList ul li ul li {
+    #eventList ul li ul li {
         padding-bottom: 25px;
     }
 }
-/****  RIGHT SIDE ~ EVENTS PAGE END  ****/
+
+@media screen and (max-width: 800px) {
+
+    #eventList {
+        min-height: 300px;
+    }
+
+    #calendar {
+        min-height: 300px;
+    }
+    
+    #eventList h3 {
+        font-size: 22px;
+        padding-bottom: 15px;
+    }
+
+    #eventList ul li {
+        font-size: 16px;
+    }
+
+    #eventList ul li ul li {
+        font-size: 11px;
+    }
+}
+
+/****  END ~ RESPONSIVE DESIGN ~ EVENTS PAGE ****/
+/****  END ~ RIGHT SIDE ~ EVENTS PAGE  ****/
 
 
 
@@ -1150,17 +1192,14 @@
     background: #ddd;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
     padding: 3rem;
-    display: grid;
-    grid-gap: 20px;
-    height: 100vh;
+    height: 100%;
     color: rgb(11, 14, 46);
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
 #faqWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, 1fr);
     justify-content: start;
     align-content: start;
 }
@@ -1168,19 +1207,18 @@
 #faq .faqHeader {
     display: grid;
     grid-column: 1;
-    grid-row: 1;
     justify-items: center;
     font-size: 50px;
 }
 
 #faq h1 {
     text-shadow: 0px 1px 3px rgba(104, 104, 104, 0.8);
+    padding-bottom: 20px;
 }
 
 .faqBoxes {
     display: grid;
     grid-column: 1;
-    grid-row: 2/9;
     padding: 0px 20px 0px 50px;
     font-size: 14px;
 }
@@ -1233,26 +1271,93 @@
     padding-bottom: 20px;
 }
 
-.box7 {
-    padding-bottom: 20px;
-}
-
 #faq .faqImage {
     display: grid;
     grid-column: 2;
-    grid-row: 1;
 }
 
 #faq img {
     display: grid;
     justify-self: end;
     grid-column: 2;
-    grid-row: 1;
     max-width: 100%;
     max-height: 95vh;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
-/****  RIGHT SIDE ~ FAQ PAGE END  ****/
+
+/****  RESPONSIVE DESIGN  ~ FAQ PAGE ****/
+@media screen and (max-width: 1024px) {
+
+    #faqWrapper {
+        margin-left: -65px;
+    }
+
+    #faq h1 {
+        font-size: 35px;
+    }
+
+    .faqBoxes {
+        font-size: 10px;
+    }
+
+    .faqBoxes .q {
+        font-size: 15px;
+    }
+
+    .faqBoxes .a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #faq {
+        margin: 10px;
+    }
+
+    #faqWrapper {
+        margin: -55px;
+    }
+
+    #faq h1 {
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    #faq .faqImage {
+        width: 75%;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    #faq h1 {
+        font-size: 25px;
+    }
+
+    .faqBoxes {
+        font-size: 7px;
+        padding: 0;
+        margin-left: 20px;
+        margin-right: -20px;
+    }
+
+    .faqBoxes .q {
+        font-size: 12px;
+    }
+
+    .faqBoxes .a {
+        font-size: 12px;
+    }
+
+    .box7 {
+        padding-bottom: 20px;
+    }
+}
+
+
+
+/****  END ~ RESPONSIVE DESIGN  ~ FAQ PAGE ****/
+/****  END ~ RIGHT SIDE ~ FAQ PAGE  ****/
 
 
 
